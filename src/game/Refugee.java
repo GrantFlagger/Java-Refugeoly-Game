@@ -1,18 +1,21 @@
 package game;
 
-public class Refugee {
+public class Refugee implements MoneyGiver,MoneyReceiver{
     
     
     private String name;
     private double money;
     private double expenses;
+    
 
-    public void receiveMoney() {
-
+    @Override
+    public void giveMoney(){
+        money=money-expenses;
+        expenses=expenses+money;
     }
-
-    public void giveMoney() {
-
+    
+    public void receiveMoney(){
+        
     }
 
     public void moveTo() {
