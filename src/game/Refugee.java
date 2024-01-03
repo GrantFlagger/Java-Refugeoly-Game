@@ -5,17 +5,21 @@ public class Refugee implements MoneyGiver,MoneyReceiver{
     
     private String name;
     private double money;
-    private double expenses;
+    ReceiverEntity expenses = new ReceiverEntity();
+    GiverEntity expenses_2=new GiverEntity();
+    
     
 
     @Override
-    public void giveMoney(){
-        money=money-expenses;
-        expenses=expenses+money;
+    public double giveMoney(){
+        money=money-expenses_2.giveMoney();
+        return money;
     }
     
-    public void receiveMoney(){
-        
+    @Override
+    public double receiveMoney(){
+       money=money+ expenses.receiveMoney();
+       return money;
     }
 
     public void moveTo() {

@@ -5,12 +5,11 @@ package game;
 
 public class GiverEntity implements MoneyGiver {
     private String name;
-    private double money=10.000;
+    private double money;
     
     @Override
-    public void giveMoney(){
-        money=money-1000;
-        System.out.println("the money are deducted");
+    public double giveMoney(){
+        return money;
     }
     
     //Create object called Ngo Bank using this class

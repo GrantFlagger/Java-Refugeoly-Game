@@ -10,6 +10,6 @@ package game;
  */
 public interface MoneyReceiver
 {
-    public void receiveMoney();
+    public double receiveMoney();
     
 }

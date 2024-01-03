@@ -1,12 +1,13 @@
 package game;
 
-public class RecieverEntity implements MoneyReceiver {
+public class ReceiverEntity implements MoneyReceiver {
 
     private String name;
     private double money;
 
-    public void receiveMoney() {
-        money=money+expenses;
+    @Override
+    public double receiveMoney() {
+        return money;
     }
 
     //Create object called Mafia Bank using this class
