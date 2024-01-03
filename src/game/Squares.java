@@ -2,7 +2,7 @@
 package game;
 
 
-public class Squares {
+public class Squares extends Board{
     private int number;
     private String text;
     //Create array list of actions 
